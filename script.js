@@ -1,8 +1,9 @@
 function secondHighest(arr) {
-    // Check if the array has less than 2 elements or all elements are the same
+    // If array has less than 2 elements, immediately return -Infinity
     if (arr.length < 2) return -Infinity;
 
-    let first = -Infinity, second = -Infinity;
+    let first = -Infinity;
+    let second = -Infinity;
 
     for (let num of arr) {
         if (num > first) {
@@ -13,13 +14,12 @@ function secondHighest(arr) {
         }
     }
 
-    // If no second highest was found, return -Infinity
     return second === -Infinity ? -Infinity : second;
 }
 
-// Example usage:
-console.log(secondHighest([5, 1, 2, 3, 4])); // Output: 4
-console.log(secondHighest([-1, -2, -3, -4, -5])); // Output: -2
-console.log(secondHighest([])); // Output: -Infinity
-console.log(secondHighest([1])); // Output: -Infinity
-console.log(secondHighest([1, 1, 1, 1, 1])); // Output: -Infinity
+// Example test cases
+console.log(secondHighest([5, 1, 2, 3, 4]));      // 4
+console.log(secondHighest([-1, -2, -3, -4, -5])); // -2
+console.log(secondHighest([]));                  // -Infinity
+console.log(secondHighest([1]));                 // -Infinity
+console.log(secondHighest([1, 1, 1, 1, 1]));      // -Infinity
