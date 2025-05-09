@@ -1,5 +1,4 @@
 function secondHighest(arr) {
-    // If array has less than 2 elements, immediately return -Infinity
     if (arr.length < 2) return -Infinity;
 
     let first = -Infinity;
@@ -23,3 +22,4 @@ console.log(secondHighest([-1, -2, -3, -4, -5])); // -2
 console.log(secondHighest([]));                  // -Infinity
 console.log(secondHighest([1]));                 // -Infinity
 console.log(secondHighest([1, 1, 1, 1, 1]));      // -Infinity
+console.log(secondHighest([5, 5, 4]));            // 4
